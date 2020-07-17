@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Encrypt and decrypt your messages!</title>
+		<link rel="stylesheet" href="index.css">
+		<script src="jsbn/jsbn.js"></script>
+		<script src="jsbn/jsbn2.js"></script>
+		<script src="jsbn/prng4.js"></script>
+		<script src="jsbn/rng.js"></script>
+		<script src="jsbn/rsa.js"></script>
+		<script src="jsbn/rsa2.js"></script>
+		<script src="jsbn/base64.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body style=" font-size: 1.25em;">
+		<header>
+			<center><h1>Encrypt and decrypt your messages!</h1></center>
+		</header>
+		<main style="width: 100%;">
+			<div style="float:left;width:50%;">
+				<h4>
+					Encrypt message
+				</h4>
+				<br>
+				Enter key: <input type="text" id="encrypt-key" style="width: 50%;">
+				<br>
+				Enter message:
+				<br>
+				<textarea id="encrypt-message" cols="80" rows="10"></textarea>
+				<br>
+				<button id="do-encrypt" onclick="encrypt()">Encrypt</button>
+				<br>
+				Result:
+				<br>
+				<textarea id="encrypt-result" cols="80" rows="10"></textarea>
+			</div>
+			<div style="float: right;">
+				<h4>
+					Decrypt message
+				</h4>
+				<br>
+				Key: <input type="text" id="decrypt-key" readonly style="width: 50%;">
+				<button id="gen-decrypt-key" onclick="gen_key()">Generate</button>
+				<br>
+				Enter message:
+				<br>
+				<textarea id="decrypt-message" cols="80" rows="10"></textarea>
+				<br>
+				<button id="do-decrypt" onclick="decrypt()">Decrypt</button>
+				<br>
+				Result:
+				<br>
+				<textarea id="decrypt-result" cols="80" rows="10"></textarea>
+			</div>
+		</main>
+		<div style="clear: both;"></div>
+		<br><br>
+		<footer>
+			<center>
+				uses <a target="_blank" href="http://www-cs-students.stanford.edu/~tjw/jsbn/">jsbn</a>
+			</center>
+		</footer>
+	</body>
+</html>
