@@ -18,6 +18,6 @@ function decrypt() {
 
 function gen_key() {
 	dkey = new RSAKey();
-	dkey.generate(512, '10001');
+	dkey.generate(598, '10001');
 	document.querySelector('#decrypt-key').value = hex2b64(dkey.n.toString(16));
 }
